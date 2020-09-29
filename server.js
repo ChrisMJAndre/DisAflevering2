@@ -22,3 +22,6 @@ var server = http.createServer(function (req, res){
 server.listen(sp.register("server"), () => {
     console.log("Server is listening")
 }); 
+
+
+//curl http://localhost:8080
