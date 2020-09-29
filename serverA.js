@@ -10,18 +10,18 @@ function findSum() {
     }
     return result;
 }
-console.log(findSum());
+//console.log(findSum());
 
 let pings = 0;
 var server = http.createServer(function (req, res){
     pings++
     res.end(`Sum: ${findSum()} from port: 9090`);
-    console.log("Server responded to request " + pings);
+    console.log("Server A responded to request " + pings);
 });
 
 
 server.listen(sp.register("server"), () => {
-    console.log("Server is listening")
+    console.log("Server A is listening")
 }); 
 
 
