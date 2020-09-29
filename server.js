@@ -20,8 +20,8 @@ var server = http.createServer(function (req, res){
 });
 
 
-server.listen(sp.register("server"), () => {
-    console.log("Server is listening")
+server.listen(sp.register("server"), function()  {
+    console.log("Server is listening" + this.address().port)
 }); 
 
 
