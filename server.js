@@ -1,5 +1,5 @@
-var http = require('http')
-var seaport = require('seaport')
+var http = require('http');
+var seaport = require('seaport');
 var sp = seaport.connect('localhost', 9090);
 
 
@@ -14,9 +14,9 @@ console.log(findSum());
 
 
 var server = http.createServer(function (req, res){
-    res.end(findSum(),9090);
-    console.log("Server responded");
-})
+    res.end(`Sum: ${findSum()} from port: 9090`);
+    console.log("Server responded to request");
+});
 
 
 server.listen(sp.register("server"), () => {
