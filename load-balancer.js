@@ -16,7 +16,7 @@ var server = http.createServer(function (req, res) {
   if (addresses.length == 0) {
     res.end("No Servers Available");
   }
-  // Some fancy code that checks the value og i and alternates the forwarding to a server (ROUND ROBIN)
+  // Some fancy code that checks the value of i and alternates the forwarding to a server (ROUND ROBIN)
   i = (i + 1) % addresses.length;
   var host = addresses[i].host.split(":").reverse()[0];
   var port = addresses[i].port;
