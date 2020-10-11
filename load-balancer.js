@@ -10,7 +10,7 @@ var i = -1;
 var proxy = httpProxy.createProxyServer({});
 // Creating the server
 var server = http.createServer(function (req, res) {
-  // Creating Arrays
+  // Creating variable containing all of the servers
   var addresses = sp.query();
   // If statement that checks if any servers are started
   if (addresses.length == 0) {
