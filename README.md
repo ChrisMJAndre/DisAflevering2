@@ -1,3 +1,10 @@
+## Server.js - Comments 
+http and seaport are saved in variables, and the object seaport.connect("localhost",9090), is where we can run the instances of our servers.
+In order to simulate any functionality a simple foor loop has been created which sums all numbers below 100.000 and resturns the result. 
+A callback function is placed within the http.createServer(), which returns the result from the loop and the port the server is running on. 
+We simple ask our server to listen to a port and print (server is listening on port:) ""
+
+
 # Load Balancer
 I dag skal vi kigge på load balancing, der samtidig er jeres næste aflevering. Vi skal lave en simpel load balancer, baseret på Round Robin-metoden, der ligeligt uddeler requests til serverne.
 Vi gør det her med en http-server, og bruger derfor to komponenter til at bygge den: **node-http-proxy** (https://github.com/nodejitsu/node-http-proxy), som er en programmerbar HTTP-proxy bibliotek og **seaport**, der er en service register og kan bruges til at dele requests ud til en given port.
@@ -17,6 +24,8 @@ Lav nu jeres socket med http.createServer(). Heri kan I placerer en callback-fun
 ### Step 4
 Til sidst i serveren, skal I skrive *SOCKET*.listen(*SEAPORT VAR*.register('server')). Dette får jeres server til at lytte igennem jeres seaport instans efter eventuelle request.
 Heri kan I have endnu en callback-function, der eventuelt logger "server is listening".
+
+Same as in server.js, some variables are imported and saved in variables. A proxy is created with httpProxy.createProxyServer(), which will allow us to forward a message to a destination. 
 
 ## Load-balancer.js
 ### Step 1
