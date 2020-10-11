@@ -13,7 +13,7 @@ function findSum() {
 }
 console.log(findSum());
 
-// Varibale pings keeps track of the 10 pings sent and recieved
+// Varibale pings keeps track of the pings recieved, it does not know globally how many pings have been recieved, only locally on the individuall server
 let pings = 0;
 // Creating the server
 var server = http.createServer(function (req, res) {
